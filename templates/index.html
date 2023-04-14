@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senarai Istilah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Senarai Istilah</h1>
+<p><a href="daftar">[Daftar Istilah Baru]</a></p>
+
+<table class="table">
+    <tr>
+        <th>BIL</th>
+        <th>ISTILAH</th>
+        <th>TINDAKAN</th>
+    </tr>
+    {% for namafail in senarai %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ namafail }}</td>
+            <td>
+                <a href="papar?istilah={{ namafail }}">Papar</a>
+                |
+                <a href="tulis?istilah={{ namafail }}">Tulis</a>
+                |
+                <a href="tambah?istilah={{ namafail }}">Tambah</a>
+                |
+                <a href="padam?istilah={{ namafail }}" onclick="return confirm('Anda pasti?')">Padam</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

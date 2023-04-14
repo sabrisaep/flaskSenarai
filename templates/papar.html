@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senarai Istilah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Senarai Istilah</h1>
+<h2>Papar Istilah: <span class="merah">{{ istilah }}</span></h2>
+
+<p><strong>Keterangan:</strong></p>
+<p>
+    {% for ayat in detail %}
+    {{ ayat }}<br>
+    {% endfor %}
+</p>
+
+<p>[<a href="/">Kembali Ke Senarai</a>]</p>
+
+</body>
+</html>

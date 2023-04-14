@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senarai Istilah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Senarai Istilah</h1>
+<h2>Tulis Keterangan Istilah: <span class="merah">{{ istilah }}</span></h2>
+
+<p>Keterangan yang anda isi di sini <br>akan mengantikan keterangan sedia ada.</p>
+
+<form action="tulis_simpan" method="post">
+    <input type="hidden" name="istilah" value="{{ istilah }}">
+    <textarea name="keterangan" class="textarea">{{ detail }}</textarea>
+    <br>
+    <button type="submit" class="button">SIMPAN</button>
+</form>
+
+<p>[<a href="/">Kembali Ke Senarai</a>]</p>
+</body>
+</html>

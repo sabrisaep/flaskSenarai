@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senarai Istilah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Senarai Istilah</h1>
+<h2>Daftar Istilah Baru</h2>
+
+<form action="daftar_simpan" method="post">
+    Masukkan istilah baru:
+    <input type="text" name="istilah">
+    <button type="submit">Simpan</button>
+</form>
+<p>[<a href="/">Kembali Ke Senarai</a>]</p>
+</body>
+</html>

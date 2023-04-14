@@ -1,0 +1,27 @@
+* {
+    font-family: Verdana;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+.merah {
+    color: red;
+}
+
+.textarea {
+    width: 300px;
+    height: 100px;
+}
+
+.button {
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
